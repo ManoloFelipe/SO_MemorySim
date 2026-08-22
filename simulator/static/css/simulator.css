@@ -1,0 +1,97 @@
+/* Simulator Custom Styles */
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Free memory block striped pattern */
+.free-memory-block {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(30, 41, 59, 0.5),
+        rgba(30, 41, 59, 0.5) 8px,
+        rgba(15, 23, 42, 0.6) 8px,
+        rgba(15, 23, 42, 0.6) 16px
+    );
+    border: 1px dashed rgba(71, 85, 105, 0.5);
+}
+
+/* Active running memory block */
+.memory-block-item {
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+.memory-block-item:hover {
+    filter: brightness(1.15);
+    z-index: 10;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Pulse animation for running badges */
+@keyframes soft-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+.animate-soft-pulse {
+    animation: soft-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Log entry styles */
+.log-item-ADMITTED {
+    color: #38bdf8;
+    border-left: 2px solid #0284c7;
+    padding-left: 6px;
+}
+
+.log-item-QUEUED {
+    color: #fbbf24;
+    border-left: 2px solid #d97706;
+    padding-left: 6px;
+}
+
+.log-item-FINISHED {
+    color: #34d399;
+    border-left: 2px solid #059669;
+    padding-left: 6px;
+}
+
+.log-item-TERMINATED {
+    color: #f87171;
+    border-left: 2px solid #dc2626;
+    padding-left: 6px;
+}
+
+.log-item-CREATED {
+    color: #c084fc;
+    border-left: 2px solid #9333ea;
+    padding-left: 6px;
+}
+
+.log-item-INFO {
+    color: #94a3b8;
+    border-left: 2px solid #475569;
+    padding-left: 6px;
+}
